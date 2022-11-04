@@ -22,7 +22,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <?php 
 
-    $id=$_GET["ID_habitacio"]
+    $id=$_GET["id"]
 
     if(isset($_GET['enviar'])){
         //creem les variables per guardar-ho amb les seguents dades escrites

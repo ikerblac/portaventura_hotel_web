@@ -82,7 +82,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             <td><?php echo $row_info_hotel['data_entrada'] ?></td>
                             <td><?php echo $row_info_hotel['data_sortida'] ?></td>
                             <td>
-                                <a href="tunning.php?id=<?php echo $row_info_hotel['ID_habitacio'] ?>"
+                                <a href="edit.php?id=<?php echo $row_info_hotel['ID_habitacio'] ?>"
                                     class="btn btn-success">Modificar</a>
                                 <a href="info.php?id=<?php echo $mostrar['ID_habitacio'] ?>" class="btn btn-info">Eliminar</a>
                             </td>
