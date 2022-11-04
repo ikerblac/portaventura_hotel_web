@@ -83,13 +83,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             <td><?php echo $row_info_hotel['nom_client'] ?></td>
                             <td><?php echo $row_info_hotel['data_entrada'] ?></td>
                             <td><?php echo $row_info_hotel['data_sortida'] ?></td>
-                            <td><?php if ($row_info_hotel["habitacio_ocupada"] = 'true') echo 'SI' else echo 'NO'?></td>
-							<td><?php echo $row_info_hotel["tipus_habitacio"];?></td>
-							<td><?php echo $row_info_hotel["qtat_persones"];?></td>
+                            <td><?php echo $row_info_hotel['habitacio_ocupada']?></td>
+							<td><?php echo $row_info_hotel['tipus_habitacio'];?></td>
+							<td><?php echo $row_info_hotel['qtat_persones'];?></td>
                             <td>
-                                <a href="mod.php?id=<?php echo $row_info_hotel['ID_habitacio'] ?>"
+                                <a href="mod.php?ID_habitacio=<?php echo $row_info_hotel['ID_habitacio'] ?>"
                                     class="btn btn-success">Modificar</a>
-                                <a href="src/php/edit_system/delete.php?id=<?php echo $mostrar['ID_habitacio'] ?>" class="btn btn-info">Eliminar</a>
+                                <a href="src/php/edit_system/delete.php?ID_habitacio=<?php echo $mostrar['ID_habitacio'] ?>" class="btn btn-info">Eliminar</a>
                             </td>
                         </tr>
                         <?php 
