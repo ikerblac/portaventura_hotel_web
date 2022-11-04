@@ -83,7 +83,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             <td><?php echo $row_info_hotel['nom_client'] ?></td>
                             <td><?php echo $row_info_hotel['data_entrada'] ?></td>
                             <td><?php echo $row_info_hotel['data_sortida'] ?></td>
-                            <td><?php echo $row_info_hotel["habitacio_ocupada"];?></td>
+                            <td><?php if ($row_info_hotel["habitacio_ocupada"] = 'true') echo 'SI' else echo 'NO'?></td>
 							<td><?php echo $row_info_hotel["tipus_habitacio"];?></td>
 							<td><?php echo $row_info_hotel["qtat_persones"];?></td>
                             <td>
