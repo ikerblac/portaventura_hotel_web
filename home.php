@@ -46,7 +46,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </nav>
 
     <div class="container-fluid p-5 bg-default text-white text-center ">
-        <img src="src/img/logo_portaventura.png" width="ss25%" />
+        <img src="src/img/logo_portaventura.png" width="25%" />
+        <br>
         <h3>
             Hola,
             <?php echo $_SESSION['user_name']; ?>
