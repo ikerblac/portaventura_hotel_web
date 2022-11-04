@@ -66,6 +66,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             <th scope="col">Nombre del cliente</th>
                             <th scope="col">Fecha de entrada</th>
                             <th scope="col">Fecha de salida</th>
+                            <th>Disponibilitat</th>
+						    <th>Tipos</th>
+						    <th>Quantitat de persones</th>
                             <!-- <th scope="col">Imagen</th> -->
                         </tr>
                     </thead>
@@ -80,6 +83,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                             <td><?php echo $row_info_hotel['nom_client'] ?></td>
                             <td><?php echo $row_info_hotel['data_entrada'] ?></td>
                             <td><?php echo $row_info_hotel['data_sortida'] ?></td>
+                            <td><?php echo $row_info_hotel["habitacio_ocupada"];?></td>
+							<td><?php echo $row_info_hotel["tipus_habitacio"];?></td>
+							<td><?php echo $row_info_hotel["qtat_persones"];?></td>
                             <td>
                                 <a href="mod.php?id=<?php echo $row_info_hotel['ID_habitacio'] ?>"
                                     class="btn btn-success">Modificar</a>
