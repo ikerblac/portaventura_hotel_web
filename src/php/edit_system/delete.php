@@ -1,7 +1,7 @@
 <?php
 	include ('connexioBD.php');
 	//revem el id per el formulari anterior per get
-	$id=$_GET["ID_habitacio"];
+	$id=$_GET["id"];
 	
 	//consulta		
 	$sql="select * from hotels where ID_habitacio = '$id'";
