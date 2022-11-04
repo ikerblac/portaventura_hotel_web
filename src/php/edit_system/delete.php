@@ -11,8 +11,7 @@
 	$resultatdelete = mysqli_query($conn,$delete);
 	//control per saber si s'ha eliminat i mostrem un enllaç per tornar al fitxer anterior
 	if($resultatdelete){
-		header("Location: ../../../home.php?solution=Eliminado correctamente");
-	    exit();
+		echo "Listo";
 	}else{
 		echo "No s'ha pogut eliminar!!";
 	}
