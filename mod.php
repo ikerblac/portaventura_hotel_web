@@ -24,24 +24,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
     $id=$_GET["id"]
 
-    if(isset($_GET['enviar'])){
-        //creem les variables per guardar-ho amb les seguents dades escrites
-        $nom=trim($_GET['nom_client']);
-        $dataentrada=trim($_GET['data_entrada']);
-        $datasortida= trim($_GET['data_sortida']);
-        //consulta que actualitza la base de dades
-        $actualitzar = "UPDATE hotels SET nom_client='$nom' , data_entrada='$dataentrada', data_sortida='$datasortida' WHERE ID_habitacio = '$id'";
-        //s'executa la consulta 
-        $resultat2 = mysqli_query($conn,$actualitzar);
-        //control d'errors 
-        if($resultat2){
-            echo "<br>S'ha actualitzat correctament<br>";
-        }else {
-            echo "<br>Hi ha hagut algún problema tarnaho a provar<br>";
-        }
-    }else{
-        echo "<br>Escriu les dades que vols cambiar <br>";
-    }
+    $query_info_hotel="SELECT * FROM hotels ";
+    $result_info_hotel=mysqli_query($connection_db,$query_info_hotel);
+    $row_info_hotel = mysqli_fetch_array($result_info_hotel);
   ?>
 </head>
 
@@ -79,27 +64,20 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
                 <div class="col-sm-12">
                     <form>
-                        <?php 
-		                    //es realitza la consulta anterior i la desem a una variable resultat
-		                    $resultat = mysqli_query($conn,$sql);
-                            //la recorrem amb un while
-		                    while($filas=mysqli_fetch_assoc($resultat)){?>
-                            <!--Taula on es mostra les dades al exceptuar de l'id i permetem cambiar les dades excepte del id per poder modificar-ho-->
-                            <h1>!Modificar!</h1>
-                            <!--al tindre el id i pasarlo mostrem les dades per el mateix propi ID i permetem cambiar-ho -->
-                            <input type="hidden" name="id" value="<?php echo $filas["ID_habitacio"];?>"><br>
-                            <label> Nom : </label><br>
-                            <input type="string" name="nom_client" value="<?php echo $filas["nom_client"];?>"><br>
-                            <label> Data entrada : </label><br>
-                            <input type="date" name="data_entrada" value="<?php echo $filas["data_entrada"];?>"><br>
-                            <label> data sortida : </label><br>
-                            <input type="date" name="data_sortida" value="<?php echo $filas["data_sortida"];?>"><br>
-                        <?php }?>
-
-                        <!--boto per enviar les dades al altre fitxer-->
-                        <input type="submit" name="enviar" value="enviar">
-                        <br>
-
+                        <div class="mb-3">
+                            <label for="client" class="form-label">Nom del client:</label>
+                            <input type="email" class="form-control" id="examplssssseInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha_inicio" class="form-label">Fecha inicio</label>
+                            <input type="date" class="form-control" id="fecha_inicio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha_final" class="form-label">Fecha final</label>
+                            <input type="date" class="form-control" id="fecha_final">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
