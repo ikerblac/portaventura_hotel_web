@@ -66,6 +66,15 @@ button:hover{
    margin: 20px auto;
 }
 
+.info {
+	background: #F2DEDE;
+	color: #00ff15;
+	padding: 10px;
+	width: 95%;
+	border-radius: 5px;
+	margin: 20px auto;
+ }
+
 .success {
    background: #D4EDDA;
    color: #40754C;

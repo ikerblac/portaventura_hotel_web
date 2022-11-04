@@ -51,6 +51,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             Hola,
             <?php echo $_SESSION['user_name']; ?>
         </h3>
+        <?php if (isset($_GET['info'])) { ?>
+        <p class="info"><?php echo $_GET['info']; ?></p>
+        <?php } ?>
+        <?php if (isset($_GET['error'])) { ?>
+        <p class="error"><?php echo $_GET['error']; ?></p>
+        <?php } ?>
     </div>
 
     <div class="container mt-5">

@@ -7,9 +7,11 @@
 	$result=mysqli_query($connection_db,$query_delete);
 	
 	if($result){
-		echo "Listo";
+		header("Location: ../../../index.php?info=Soilicitad porcesada correctamente");
+	    exit();
 	}else{
-		echo "No s'ha pogut eliminar!!";
+		header("Location: ../../../index.php?info=No s'ha pogut eliminar!!");
+	    exit();
 	}
 	
 ?>
