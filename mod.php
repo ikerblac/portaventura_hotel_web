@@ -20,14 +20,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="shortcut icon" href="src/img/lsc_logo.webp" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <?php 
-
-    $id=$_GET["id"]
-
-    $query_info_hotel="SELECT * FROM hotels ";
-    $result_info_hotel=mysqli_query($connection_db,$query_info_hotel);
-    $row_info_hotel = mysqli_fetch_array($result_info_hotel);
-  ?>
+    
 </head>
 
 <body>
