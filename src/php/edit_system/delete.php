@@ -1,15 +1,12 @@
 <?php
-	include ('connexioBD.php');
-	//revem el id per el formulari anterior per get
-	$id=$_GET["id"];
-	echo $id;
+	include "../db_config.php";
 	
-	//consulta per eliminar
-	$delete="DELETE FROM hotels where ID_habitacio ='$id'";
-	//eliminem la taula en questio per el id 
-	$resultatdelete = mysqli_query($connection_db,$delete);
-	//control per saber si s'ha eliminat i mostrem un enllaç per tornar al fitxer anterior
-	if($resultatdelete){
+	$id=$_GET["id"];
+	
+	$query_delete="DELETE FROM hotels where ID_habitacio ='$id'";
+	$result=mysqli_query($connection_db,$query_delete);
+	
+	if($result){
 		echo "Listo";
 	}else{
 		echo "No s'ha pogut eliminar!!";
