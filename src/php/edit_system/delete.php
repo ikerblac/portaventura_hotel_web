@@ -2,7 +2,8 @@
 	include ('connexioBD.php');
 	//revem el id per el formulari anterior per get
 	$id=$_GET["id"];
-	
+	echo $id;
+	/*
 	//consulta		
 	$sql="select * from hotels where ID_habitacio = '$id'";
 	//consulta per eliminar
@@ -15,5 +16,5 @@
 	}else{
 		echo "No s'ha pogut eliminar!!";
 	}
-
+	*/
 ?>
