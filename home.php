@@ -46,7 +46,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     </nav>
 
     <div class="container-fluid p-5 bg-default text-white text-center ">
-        <img src="src/img/logo_portaventura.png" width="25%" />
+        <img src="src/img/logo_portaventura.png" width="ss25%" />
         <h3>
             Hola,
             <?php echo $_SESSION['user_name']; ?>
@@ -75,7 +75,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 		     
 		      while($row_info_hotel=mysqli_fetch_array($result_info_hotel)){
 		      ?>
-
                         <tr>
                             <td><?php echo $row_info_hotel['ID_habitacio'] ?></td>
                             <td><?php echo $row_info_hotel['nom_client'] ?></td>
