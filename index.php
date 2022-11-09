@@ -12,7 +12,6 @@
 
 <body>
     <form action="src/php/login_system/login.php" method="post">
-        <h2>Iniciar sesion</h2>
         <img src="src/img/logo_portaventura.png" width="50%" />
         <?php if (isset($_GET['error'])) { ?>
         <p class="error"><?php echo $_GET['error']; ?></p>
