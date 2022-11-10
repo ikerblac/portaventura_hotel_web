@@ -28,10 +28,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/home.php">Inicio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="home.php">Inicio</a>
+            <a class="navbar-brand" href="rooms.php">Habitaciones</a>
+            <a class="navbar-brand" href="bookings.php">Reservas</a>
+            <a class="navbar-brand" href="clients.php">Clientes</a>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
 

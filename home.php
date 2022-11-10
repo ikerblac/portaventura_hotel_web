@@ -27,7 +27,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <a class="navbar-brand" href="home.php">Inicio</a>
             <a class="navbar-brand" href="rooms.php">Habitaciones</a>
             <a class="navbar-brand" href="bookings.php">Reservas</a>
-            <a class="navbar-brand" href="bookings.php">Clientes</a>
+            <a class="navbar-brand" href="clients.php">Clientes</a>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
 
