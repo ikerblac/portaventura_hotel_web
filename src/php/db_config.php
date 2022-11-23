@@ -1,6 +1,6 @@
 <?php
 
-$sname= "10.10.10.2";
+$sname= "server.ikerblanco.com";
 $unmae= "web_usr";
 $password = "Iker2003.";
 

@@ -9,7 +9,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 <html lang="es">
 
 <head>
-    <title>Coches</title>
+    <title>Modificar</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -39,19 +39,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             </button>
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
-
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="src/php/login_system/logout.php">Cerrar sesion</a>
                     </li>
-
             </div>
         </div>
     </nav>
 
     <div class="container-fluid p-5 bg-default text-white text-center ">
-        <img src="src/img/lsc_logo.webp" width="25%" />
+        <img src="src/img/lsc_logo.webp" width="15%" />
         <h3>
             Modificando el registro de la habitacion: ,
             

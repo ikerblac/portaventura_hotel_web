@@ -5,12 +5,11 @@ include "src/php/db_config.php";
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
  ?>
- 
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <title>Clients</title>
+    <title>Bookings</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -20,7 +19,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <meta name="author" content="ikerblac">
     <link rel="shortcut icon" href="src/img/logo_portaventura.png" />
     <?php 
-        $query_info_hotel="SELECT * FROM clients";
+        $query_info_hotel="SELECT * FROM hotels";
         $result_info_cliente=mysqli_query($connection_db,$query_info_hotel);
     ?>
 </head>
@@ -62,23 +61,34 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Id de cliente</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Primer apellido</th>
-                            <th scope="col">Segundo apellido</th>
-                            <th scope="col">Email</th>
+                            <th scope="col">id</th>
+                            <th scope="col">Id del hotel</th>
+                            <th scope="col">Id Habitacio</th>
+                            <th scope="col">Tipos</th>
+							<th scope="col">Llit</th>
+                            <th scope="col">Persones</th>
+                            <th scope="col">Preu</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
+                        <?php 
+
+		     
 		      while($row_info_cliente=mysqli_fetch_array($result_info_cliente)){
 		      ?>
                         <tr>
                             <td><?php echo $row_info_cliente['id'] ?></td>
-                            <td><?php echo $row_info_cliente['name'] ?></td>
-                            <td><?php echo $row_info_cliente['1lastname'] ?></td>
-                            <td><?php echo $row_info_cliente['2lastname'] ?></td>
-                            <td><?php echo $row_info_cliente['email'] ?></td>
+                            <td><?php echo $row_info_cliente['clientid'] ?></td>
+                            <td><?php echo $row_info_cliente['hotelid'] ?></td>
+                            <td><?php echo $row_info_cliente['roomid'] ?></td>
+							<td><?php echo $row_info_cliente['entryDate'] ?></td>
+                            <td><?php echo $row_info_cliente['departureDate'] ?></td>
+                            <td><?php echo $row_info_cliente['pension'] ?></td>
+                            <td><?php echo $row_info_cliente['totalprice'] ?></td>
+                            <td>
+                                <a href="web.php?id_cliente=<?php echo $id['id'] ?>" class="btn btn-success">Modificar</a>
+                                <a href="web.php?id_cliente=<?php echo $id['id'] ?>" class="btn btn-info">Info</a>
+                            </td>
                         </tr>
                         <?php 
 	      }
